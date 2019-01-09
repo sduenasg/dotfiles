@@ -12,3 +12,4 @@ do
 	sudo apt install $pkg
 done
 
+pip install pywal
