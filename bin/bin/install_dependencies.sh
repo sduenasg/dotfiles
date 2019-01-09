@@ -4,7 +4,7 @@ echo -e "\n---- using apt ---"
 sudo apt install zsh
 chsh -s $(which zsh)
 
-packages=(git figlet cowsay powerline powerline-fonts python3 python3-pip fortune)
+packages=(git figlet cowsay powerline powerline-fonts python3 python3-pip fortune imagemagick)
 
 for pkg in ${packages[@]}
 do
@@ -12,4 +12,4 @@ do
 	sudo apt install $pkg
 done
 
-pip install pywal
+sudo pip3 install pywal
