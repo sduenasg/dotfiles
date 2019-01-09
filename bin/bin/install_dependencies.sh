@@ -21,7 +21,7 @@ fi
 
 chsh -s $(which zsh)
 
-packages=(git figlet cowsay powerline powerline-fonts python3 python3-pip fortune imagemagick)
+packages=(git curl wget figlet cowsay powerline powerline-fonts python3 python3-pip fortune imagemagick)
 
 for pkg in ${packages[@]}
 do
@@ -33,5 +33,7 @@ do
 		exit 2
 	fi
 done
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 sudo pip3 install pywal
