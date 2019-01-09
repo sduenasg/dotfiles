@@ -1,6 +1,10 @@
 #!/bin/bash
 echo -e "\n---- using apt ---"
-packages=(figlet cowsay powerline powerline-fonts python3 python3-pip fortune)
+
+sudo apt install zsh
+chsh -s $(which zsh)
+
+packages=(git figlet cowsay powerline powerline-fonts python3 python3-pip fortune)
 
 for pkg in ${packages[@]}
 do
