@@ -1,6 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+#Add this to your .xinitrc or whatever file starts programs on startup.
+#-R restores the last colorscheme that was in use
+wal -R
+
 # Path to your oh-my-zsh installation.
   export ZSH="$HOME/.oh-my-zsh"
 
