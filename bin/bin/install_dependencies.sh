@@ -1,7 +1,7 @@
 #!/bin/bash
 
 haveProg(){
-	[-x "$(which $1)"]
+	[ -n "$(command -v $1)" ]
 }
 
 install_apt(){
@@ -21,7 +21,7 @@ fi
 
 chsh -s $(which zsh)
 
-packages=(git curl wget figlet cowsay powerline powerline-fonts python3 python3-pip fortune imagemagick)
+packages=(git curl wget figlet cowsay powerline powerline-fonts python3 python3-pip fortune imagemagick neofetch)
 
 for pkg in ${packages[@]}
 do
