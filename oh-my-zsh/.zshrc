@@ -3,7 +3,7 @@
 
 #Add this to your .xinitrc or whatever file starts programs on startup.
 #-R restores the last colorscheme that was in use
-wal -R
+wal -R>/dev/null
 
 # Path to your oh-my-zsh installation.
   export ZSH="$HOME/.oh-my-zsh"
