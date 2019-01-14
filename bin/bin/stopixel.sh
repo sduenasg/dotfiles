@@ -1,1 +1,2 @@
-systemctl stop lightdm
+#!/bin/bash
+sudo systemctl stop lightdm
