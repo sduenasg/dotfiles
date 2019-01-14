@@ -101,3 +101,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# pywal
+# Import colorscheme from 'wal' asynchronously
+# &  # Run the process in the background
+#  ( ) # Hide shell job control messages
+(cat ~/.cache/wal/sequences &)
