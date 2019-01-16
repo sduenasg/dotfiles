@@ -105,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # Import colorscheme from 'wal' asynchronously
 # &  # Run the process in the background
 #  ( ) # Hide shell job control messages
-if [ -z "$SSH_CONNECTION" ]
-then
-	(cat ~/.cache/wal/sequences &)
-fi
+#if [ -z "$SSH_CONNECTION" ]
+#then
+#	(cat ~/.cache/wal/sequences &)
+#fi

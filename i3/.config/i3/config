@@ -171,18 +171,13 @@ bar {
 
 bindsym $mod+shift+x exec i3lock
 
-
 exec --no-startup-id i3-msg 'workspace 2:Firefox; exec firefox'
+#exec feh --bg-scale ~/Pictures/wallpapers/dinowallpaper.png
 
 #Volume controls using amixer
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ #increase sound volume 
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- #decrease sound volume 
 bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle # mute sound
-
-# Pulse Audio controls using pactl
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -190,4 +185,25 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+
+# Gaps config--------------
+# Disable window titlebars
+for_window [class="^.*"] border pixel 0
+gaps inner 5
+gaps outer 5
+
+#draws borders only if there is more than one container in the workspace
+smart_borders on
+
+
+#End of Gaps config--------i
+
+#Pywal
+#exec_always (cat ~/.cache/wal/sequences)
+exec_always wal -R
+#ST Xdefaults
+exec_always xrdb ~/.Xdefaults
+
+#Compton
+exec_always compton
 
