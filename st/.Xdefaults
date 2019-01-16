@@ -1,2 +1,2 @@
-*.font: Hack:pixelsize=12:antialias=true:autohint=true;
-*.alpha: 150
+*.font: Hack:pixelsize=14:antialias=true:autohint=true;
+*.alpha: 190

@@ -200,10 +200,10 @@ smart_borders on
 
 #Pywal
 #exec_always (cat ~/.cache/wal/sequences)
-exec_always wal -R
+exec wal -R
 #ST Xdefaults
-exec_always xrdb ~/.Xdefaults
+exec xrdb ~/.Xdefaults
 
 #Compton
-exec_always compton
+exec compton
 
