@@ -30,8 +30,8 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
-
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec st
 # kill focused window
 bindsym $mod+Shift+q kill
 
@@ -94,8 +94,8 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1"
-set $ws2 "2"
+set $ws1 "1:Terminals"
+set $ws2 "2:Firefox"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
@@ -168,3 +168,10 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+bindsym $mod+shift+x exec i3lock
+
+
+exec --no-startup-id i3-msg 'workspace 2:Firefox; exec firefox'
+
+
