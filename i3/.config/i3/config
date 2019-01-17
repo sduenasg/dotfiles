@@ -191,20 +191,22 @@ for_window [class="^.*"] border pixel 3
 gaps inner 5
 gaps outer 5
 
-#draws borders only if there is more than one container in the workspace
+# draws borders only if there is more than one container in the workspace
 smart_borders on
 
-#creates gaps only if there is more than one container on the workspace
+# creates gaps only if there is more than one container on the workspace
 smart_gaps on
 #End of Gaps config--------i
 
-#Pywal
+# Pywal
 #exec_always (cat ~/.cache/wal/sequences)
 exec wal -R
 
-#ST Xdefaults
+# ST Xdefaults
 exec xrdb ~/.Xdefaults
 
-#Compton
+# Compton
 exec compton
 
+# Syncthing
+exec syncthing -no-browser
