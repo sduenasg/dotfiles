@@ -9,6 +9,8 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+
+" use :PlugInstall to install
 call plug#begin()
 
 Plug 'scrooloose/nerdtree'
