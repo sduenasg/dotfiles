@@ -94,8 +94,8 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:Terminals"
-set $ws2 "2:Firefox"
+set $ws1 "1"
+set $ws2 "2"
 set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
@@ -167,11 +167,13 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
+	position top
+
 }
 
 bindsym $mod+shift+x exec i3lock
 
-exec --no-startup-id i3-msg 'workspace 2:Firefox; exec firefox'
+exec --no-startup-id i3-msg 'workspace 2; exec firefox'
 #exec feh --bg-scale ~/Pictures/wallpapers/dinowallpaper.png
 
 #Volume controls using amixer
