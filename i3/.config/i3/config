@@ -166,9 +166,10 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+	font pango:mono 11
         status_command i3status
 	position top
-
+	mode dock
 }
 
 bindsym $mod+shift+x exec i3lock
@@ -189,9 +190,12 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Gaps config--------------
 # Disable window titlebars
+bindsym $mod+Shift+d gaps inner current set 0; gaps outer current set 0;
+bindsym $mod+Shift+t gaps inner current set 10; gaps outer current set 10;
+
 for_window [class="^.*"] border pixel 3
-gaps inner 5
-gaps outer 5
+gaps inner 10
+gaps outer 10
 
 # draws borders only if there is more than one container in the workspace
 smart_borders on
@@ -212,3 +216,11 @@ exec compton
 
 # Syncthing
 exec syncthing -no-browser
+
+# Android Studio
+for_window [title="Android Studio"] move to workspace $ws5
+#Scratchpad terminal
+#
+#Special keys
+#bindsym XF86PowerOff exec --no-startup-id prompt "Shutdown computer?" "$shutdown"
+#

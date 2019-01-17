@@ -1,3 +1,9 @@
+"        _
+" __   _(_)_ __ ___  _ __ ___
+" \ \ / / | '_ ` _ \| '__/ __|
+"  \ V /| | | | | | | | | (__
+"   \_/ |_|_| |_| |_|_|  \___|
+
 " this is written in a language called VimL, or vimscript. It defines vim customization.
 
 "========================== Plugins ==============================
@@ -35,7 +41,7 @@ set background=dark
 
 filetype on
 syntax enable
-
+set clipboard=unnamedplus
 set wildmenu		" bash-like auto-completion
 set wildmode=list:longest
 
