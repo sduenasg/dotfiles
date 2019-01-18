@@ -109,3 +109,6 @@ source $ZSH/oh-my-zsh.sh
 #then
 #	(cat ~/.cache/wal/sequences &)
 #fi
+#
+alias ls="ls -hN --color=auto --group-directories-first"
+alias grep="grep --color=auto" #color grep
