@@ -12,7 +12,12 @@
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
+case $(tty) in
+	(/dev/tty[1-9]) ZSH_THEME="robbyrussel";;
+	(*) ZSH_THEME="agnoster";;
+esac
+
+#ZSH_THEME="agnoster"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
