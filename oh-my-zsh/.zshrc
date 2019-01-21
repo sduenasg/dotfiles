@@ -82,7 +82,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ls="ls -hN --color=auto --group-directories-first"
+alias ls="ls -hN --color=auto --group-directories-first -A"
 alias grep="grep --color=auto" #color grep
 alias cp="cp -i"
 alias df="df -h"

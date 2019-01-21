@@ -32,7 +32,7 @@ alias df='df -h'                          # human-readable sizes
 alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
-alias ls='ls -hN --color=auto --group-directories-first'
+alias ls='ls -hN --color=auto --group-directories-first -A'
 alias grep='grep --color=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
