@@ -22,6 +22,8 @@ Plug 'LukeSmithxyz/vimling'
 Plug 'vimwiki/vimwiki'
 Plug 'bling/vim-airline'
 Plug 'tpope/vim-commentary'
+Plug 'vim-python/python-syntax'
+
 call plug#end()
 
 set bg=light
@@ -61,21 +63,8 @@ set clipboard=unnamedplus
 " Check file in shellcheck:
 	map <leader>s :!clear && shellcheck %<CR>
 
-" Open my bibliography file in split
-	map <leader>b :vsp<space>$BIB<CR>
-	map <leader>r :vsp<space>$REFER<CR>
-
 " Replace all is aliased to S.
 	nnoremap S :%s//g<Left><Left>
-
-" Compile document, be it groff/LaTeX/markdown/etc.
-	map <leader>c :w! \| !compiler <c-r>%<CR>
-
-" Open corresponding .pdf/.html or preview
-	map <leader>p :!opout <c-r>%<CR><CR>
-
-" Runs a script that cleans out tex build files whenever I close out of a .tex file.
-	autocmd VimLeave *.tex !texclear %
 
 " Ensure files are read as what I want:
 	let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
@@ -87,11 +76,6 @@ set clipboard=unnamedplus
 " Copy selected text to system clipboard (requires gvim/nvim/vim-x11 installed):
 	vnoremap <C-c> "+y
 	map <C-p> "+P
-
-" Enable Goyo by default for mutt writting
-	" Goyo's width will be the line limit in mutt.
-	autocmd BufRead,BufNewFile /tmp/neomutt* let g:goyo_width=80
-	autocmd BufRead,BufNewFile /tmp/neomutt* :Goyo
 
 " Automatically deletes all trailing whitespace on save.
 	autocmd BufWritePre * %s/\s\+$//e
@@ -106,5 +90,3 @@ set clipboard=unnamedplus
 	inoremap <leader><leader> <Esc>/<++><Enter>"_c4l
 	vnoremap <leader><leader> <Esc>/<++><Enter>"_c4l
 	map <leader><leader> <Esc>/<++><Enter>"_c4l
-
-
