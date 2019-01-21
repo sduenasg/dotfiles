@@ -1,6 +1,6 @@
 # Runs on log-in
 export QT_QPA_PLATFORMTHEME="qt5ct"
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/nvim
 export TERMINAL="st"
 export BROWSER="firefox"
 #Adds ~/bin and all subdirectories to the PATH
