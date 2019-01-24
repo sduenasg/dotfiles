@@ -174,12 +174,12 @@ bar {
 
 bindsym $mod+shift+x exec i3lock
 
-exec --no-startup-id i3-msg 'workspace 2; exec firefox'
+#exec --no-startup-id i3-msg 'workspace 2; exec firefox'
 #exec feh --bg-scale ~/Pictures/wallpapers/dinowallpaper.png
 
 #Volume controls using amixer
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ #increase sound volume 
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- #decrease sound volume 
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle # mute sound
 
 # Media player controls
