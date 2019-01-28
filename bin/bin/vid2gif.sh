@@ -1,28 +1,49 @@
 #!/bin/bash
+# Use mmpeg to convert videos to animated gifs
 
-OPTIND=2
-if [ -z $1 ]; then
-	echo "Enter video file path";
-	exit 1;
-else
-	echo "var is set to '$1'";
+usage() {
+	echo "Usage: vid2gif -i path/to/file [-d frame-delay] [-r fps]"
+	}
+
+
+DELAY="-delay 20"
+FPS="-r 5"
+DIR="frames"
+
+if [ $# == 0 ]; then
+	usage
+	exit 0
 fi
 
-while getopts ":d:r:" option; do
-	case "${option}"
-	in
-	d) DELAY="-d $OPTARG";;
-	r) FPS="-r $OPTARG";;
+while getopts ":hd:i:r:" option; do
+	case "${option}" in
+	h)
+		usage
+		exit0;;
+	d)
+		DELAY="-delay $OPTARG";;
+	r)
+		FPS="-r $OPTARG";;
+	i)
+		FILE=$OPTARG;;
 	esac
 done
 
-if [ -d "frames" ]; then
-	echo "Directory frames already exists";
+if [ -z $FILE ]; then
+	usage >&2;
 	exit 1;
 fi
 
-mkdir frames
-ffmpeg -i $1 -r 5 'frames/frame-%03d.png'
-cd frames
-convert -delay 20 -loop 0 *.png ../out.gif
-rm -rf frames
+
+if [ -d $DIR ]; then
+	usage >&2;
+	exit 1;
+fi
+
+mkdir $DIR
+$(ffmpeg -i $FILE $FPS $DIR'/frame-%03d.png' -loglevel quiet)
+
+cd $DIR
+$(convert $DELAY -loop 0 *.png ../out.gif)
+cd ..
+$(rm -rf $DIR)
