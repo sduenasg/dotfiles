@@ -29,7 +29,7 @@ call plug#end()
 set bg=light
 set mouse=a
 set nohlsearch
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 " Some basics:
 	set nocompatible
 	filetype plugin on
