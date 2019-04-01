@@ -178,8 +178,8 @@ bindsym $mod+shift+x exec i3lock
 #exec feh --bg-scale ~/Pictures/wallpapers/dinowallpaper.png
 
 #Volume controls using amixer
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- #decrease sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 1%+ #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 1%- #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle # mute sound
 
 # Media player controls
