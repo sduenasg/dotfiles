@@ -1,1 +1,1 @@
-/home/sara/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme
+./themes/spaceship-prompt/spaceship.zsh-theme
