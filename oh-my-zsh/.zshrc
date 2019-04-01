@@ -14,10 +14,10 @@
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 case $(tty) in
 	(/dev/tty[1-9]) ZSH_THEME="robbyrussel";;
-	(*) ZSH_THEME="agnoster";;
+	(*) ZSH_THEME="spaceship";;
 esac
 
-#ZSH_THEME="agnoster"
+#ZSH_THEME="spaceship"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
