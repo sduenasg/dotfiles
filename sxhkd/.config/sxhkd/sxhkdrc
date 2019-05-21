@@ -2,9 +2,21 @@ super + d
 	dmenu_run
 super + Return
 	$TERMINAL
-
 super + i
 	$TERMINAL -e htop
-
 super + shift + w
 	$BROWSER
+XF86AudioRaiseVolume
+	amixer -D pulse sset Master 1%+
+XF86AudioLowerVolume
+	amixer -D pulse sset Master 1%-
+XF86AudioMute
+	amixer -D pulse set Master 1+ toggle
+XF86AudioPlay
+	playerctl play
+XF86AudioPause
+	playerctl pause
+XF86AudioNext
+	playerctl next
+XF86AudioPrev
+	playerctl previous
