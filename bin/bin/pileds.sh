@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Controls the built-in led brightness on a raspberry pi
 
 usage() {

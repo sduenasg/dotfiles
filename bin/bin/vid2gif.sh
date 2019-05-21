@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 # Use mmpeg to convert videos to animated gifs
 
 usage() {
