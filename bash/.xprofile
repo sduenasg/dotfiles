@@ -1,0 +1,4 @@
+sxhkd & # Bind keys
+xrdb ~/.Xdefaults
+wal -R # Pywal
+syncthing -no-browser &

@@ -1,0 +1,10 @@
+super + d
+	dmenu_run
+super + Return
+	$TERMINAL
+
+super + i
+	$TERMINAL -e htop
+
+super + shift + w
+	$BROWSER
