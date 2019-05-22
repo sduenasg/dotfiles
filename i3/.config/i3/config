@@ -189,6 +189,7 @@ smart_gaps on
 for_window [title="Android Studio"] move to workspace $ws5
 
 # init
+exec sxhkd
 exec wal -R
 exec xrdb ~/.Xdefaults
 exec compton
