@@ -12,3 +12,5 @@ export PATH=$PATH:/usr/local/games
 export PATH=$PATH:/home/sara/.dotnet/tools
 export ASPNETCORE_Environment=Development
 
+# Android studio fix on dwm
+export _JAVA_AWT_WM_NONREPARENTING=1
