@@ -5,6 +5,9 @@
 # if not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+[ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
+
+
 stty -ixon # Disable ctrl-s and ctrl-q (pause and resume)
 shopt -s autocd # Allows to cd into directory by typing the directory name.
 shopt -s histappend # Enable history appending instead of overwriting
@@ -15,8 +18,6 @@ shopt -s checkwinsize
 
 xhost +local:root > /dev/null 2>&1
 
-# better yaourt colors
-export YAOURT_COLORS="nb=1:pkg=1:ver=1;32:lver=1;45:installed=1;42:grp=1;34:od=1;41;5:votes=1;44:dsc=0:other=1;35"
 
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
@@ -25,6 +26,10 @@ PS1='\[\033[01;32m\][\u@\h\[\033[01;37m\] \W\[\033[01;32m\]]\$\[\033[00m\] '
 
 # Simple PS1 without colors
 #PS1='\u@\h \w \$ '
+
+# Set up node version manager
+source /usr/share/nvm/init-nvm.sh
+
 
 #Aliases
 alias cp="cp -i"                          # confirm before overwriting something
@@ -36,4 +41,6 @@ alias ls='ls -hN --color=auto --group-directories-first -A'
 alias grep='grep --color=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
-
+alias ls="ls -hN --color=auto --group-directories-first -A"
+alias ci3="nvim ~/.config/i3/config"
+alias la="ls -lAh"

@@ -1,4 +1,9 @@
-*.font: Hack:pixelsize=14:antialias=true:autohint=true;
-/*
-*.alpha: 180
-*/
+!! Transparency (0-1):
+st.alpha: 0.92
+
+!! set a default font and a size as below
+st.font: Monospace-11;
+
+
+! st.termname: st-256color
+! st.borderpx: 2
