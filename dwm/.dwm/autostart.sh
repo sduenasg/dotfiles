@@ -7,7 +7,7 @@ wal -R # Pywal
 syncthing -no-browser &
 
 dte(){
-  dte="$(date +"%A, %B %d | 🕒 %l:%M%p")"
+  dte="$(date +"%A, %d %B | 🕒 %k:%M%p")"
   echo -e "$dte"
 }
 
