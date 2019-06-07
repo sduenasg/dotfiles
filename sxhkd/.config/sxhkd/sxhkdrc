@@ -7,7 +7,7 @@ super + i
 super + shift + w
 	$BROWSER
 super + grave
-	dmenuunicode
+	dmenuunicode.sh
 XF86AudioRaiseVolume
 	amixer -D pulse sset Master 1%+
 XF86AudioLowerVolume
