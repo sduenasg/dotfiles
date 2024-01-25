@@ -189,14 +189,25 @@ require('lazy').setup({
     },
   },
 
+  -- neotokyo
   {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
+    "folke/tokyonight.nvim",
+    lazy = false,
     priority = 1000,
+    opts = {},
     config = function()
-      vim.cmd.colorscheme 'onedark'
+      vim.cmd[[colorscheme tokyonight-night]]
     end,
   },
+
+  --{
+    -- Theme inspired by Atom
+    --'navarasu/onedark.nvim',
+    --priority = 1000,
+    --config = function()
+     -- vim.cmd.colorscheme 'onedark'
+    --end,
+ -- },
 
   {
     -- Set lualine as statusline
@@ -643,6 +654,31 @@ mason_lspconfig.setup_handlers {
       filetypes = (servers[server_name] or {}).filetypes,
     }
   end,
+}
+
+
+--
+require('lspconfig').pylsp.setup {
+  on_attach = on_attach,
+  flags = {
+    -- This will be the default in neovim 0.7+
+    debounce_text_changes = 150,
+  },
+  settings = {
+    -- configure plugins in pylsp
+    pylsp = {
+      plugins = {
+        -- formatter options
+        black = { enabled = false },
+        autopep8 = { enabled = false },
+        yapf = { enabled = false },
+        -- linter options
+        pylint = { enabled = false },
+        pyflakes = { enabled = false },
+        pycodestyle = { enabled = false },
+      },
+    },
+  },
 }
 
 -- [[ Configure nvim-cmp ]]
