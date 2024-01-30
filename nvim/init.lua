@@ -673,7 +673,7 @@ require('lspconfig').pylsp.setup {
         autopep8 = { enabled = false },
         yapf = { enabled = false },
         -- linter options
-        pylint = { enabled = false },
+        pylint = { enabled = true },
         pyflakes = { enabled = false },
         pycodestyle = { enabled = false },
       },
